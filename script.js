@@ -8,3 +8,4 @@ for(let i = 0; i < GRID_DIMENSION * GRID_DIMENSION; i++) {
   gridSlot.addEventListener("mouseenter", () => gridSlot.style.backgroundColor = "black");
   container.appendChild(gridSlot);
 }
+
