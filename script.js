@@ -1,10 +1,12 @@
 const GRID_DIMENSION = 16;
+let clearDimension = 16;
 
 const container = document.querySelector("#container");
 
 function makeGrid(dimension) {
   container.textContent = "";
   const squareSize = 850 / dimension;
+  clearDimension = dimension;
 
   for(let i = 0; i < dimension * dimension; i++) {
     let gridSlot = document.createElement("div");
@@ -16,9 +18,6 @@ function makeGrid(dimension) {
     container.appendChild(gridSlot);
   }
 }
-
-const button = document.querySelector("button");
-button.addEventListener("click", request);
 
 function request() {
   let userInput = Number(prompt("Please enter the number of squares per side for the new grid"));
@@ -32,5 +31,11 @@ function request() {
     makeGrid(userInput);
   }
 }
+
+const button = document.querySelector("button");
+button.addEventListener("click", request);
+
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", () => makeGrid(clearDimension));
 
 makeGrid(GRID_DIMENSION);
