@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 832px;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+#container div {
+  margin: 0;
+}
